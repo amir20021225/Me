@@ -1,13 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohammad Amir Neaz</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>amar sonar bangla </h1>
-    
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="img/logo01.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Serveces</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Full Strok Web Devloper</p>
+                <h1>Hi, I'm <span>Md. Amir Neaz </span> <br> From Saidpur, Nilphamari,Bangladesh.
+
+                </h1>
+            </div>
+        </div>
+    </div>
+    <!-- --------about------ -->
+<div id="about">
+    <div class="comtainer">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="img/02.png" >
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub">About Me</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium rerum, fugiat voluptas autem ullam eaque alias temporibus laborum vel aliquam, eveniet esse neque laboriosam cupiditate facilis. Commodi repellendus animi rerum.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                    <p class="tab-links"onclick="opentab('Experience')">Experience</p>
+                    <p class="tab-links"onclick="opentab('Education')">Education</p>
+                </div>
+                <div class="tab-contents act-tab" id="Skills">
+                    <ul>
+                        <li><span> Web Devlopment</span><br>Creating any type website </li>
+                        <li><span> Ethical Heacking</span><br>To protect website </li>
+                        <li><span> The Interpreter</span><br>For expressing opinions with everyone </li>
+
+                    </ul>
+                </div>
+                <div class="tab-contents"id="expressing">
+                    <ul>
+                        <li><span> Web Devlopment</span><br>Creating any type website </li>
+                        <li><span> Ethical Heacking</span><br>To protect website </li>
+                        <li><span> The Interpreter</span><br>For expressing opinions with everyone </li>
+
+                    </ul>
+                </div>
+                <div class="tab-contents"id="Education">
+                    <ul>
+                        <li><span> Web Devlopment</span><br>Creating any type website </li>
+                        <li><span> Ethical Heacking</span><br>To protect website </li>
+                        <li><span> The Interpreter</span><br>For expressing opinions with everyone </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-link");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classlist.remove("active-link")
+        }
+        for(tabcontent of tabcontents){
+            tabcontents.classlist.remove("act-tab");
+        }
+    }
+
+
+
+
+</script>
+
+
+
 </body>
+
 </html>
