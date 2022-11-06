@@ -42,30 +42,31 @@
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium rerum, fugiat voluptas autem ullam eaque alias temporibus laborum vel aliquam, eveniet esse neque laboriosam cupiditate facilis. Commodi repellendus animi rerum.</p>
                 <div class="tab-titles">
                     <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
-                    <p class="tab-links"onclick="opentab('Experience')">Experience</p>
-                    <p class="tab-links"onclick="opentab('Education')">Education</p>
+                    <p class="tab-links"onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links"onclick="opentab('education')">Education</p>
                 </div>
                 <div class="tab-contents act-tab" id="Skills">
                     <ul>
                         <li><span> Web Devlopment</span><br>Creating any type website </li>
                         <li><span> Ethical Heacking</span><br>To protect website </li>
-                        <li><span> The Interpreter</span><br>For expressing opinions with everyone </li>
+                        <li><span> Interpreter</span><br>For expressing opinions with everyone </li>
 
                     </ul>
                 </div>
-                <div class="tab-contents"id="expressing">
+                <div class="tab-contents" id="experience">
                     <ul>
-                        <li><span> Web Devlopment</span><br>Creating any type website </li>
-                        <li><span> Ethical Heacking</span><br>To protect website </li>
-                        <li><span> The Interpreter</span><br>For expressing opinions with everyone </li>
+                        <li><span> 2021</span><br>Start work with Sandhani Life Insurance Co. Ltd</li>
+                        <li><span> 2020</span><br>3096 Hacking in one day. </li>
+                        <li><span> 2019</span><br>Presiding Officer on School Cabinet Election. </li>
 
                     </ul>
                 </div>
-                <div class="tab-contents"id="Education">
+                <div class="tab-contents" id="education">
                     <ul>
-                        <li><span> Web Devlopment</span><br>Creating any type website </li>
-                        <li><span> Ethical Heacking</span><br>To protect website </li>
-                        <li><span> The Interpreter</span><br>For expressing opinions with everyone </li>
+                        <li><span> 2020-2021</span><br>Higher Secondary School Certificate. <br> (GPA-3.00) </li>
+                        <li><span> 2019-2020</span><br>Secondary School Certificate.<br>(GPA-2.83) </li>
+                        <li><span> 2018</span><br>Junior School Certificate.<br>(GPA-2.83) </li>
+                        <li><span> 2015</span><br>Primary School Certificate.<br>(GPA-4.25) </li>
 
                     </ul>
                 </div>
@@ -84,6 +85,8 @@
     for(tabcontent of tabcontents){
         tabcontent.classList.remove("act-tab");
     }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("act-tab")
    }
     </script>
 
