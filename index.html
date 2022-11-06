@@ -23,8 +23,8 @@
                 </ul>
             </nav>
             <div class="header-text">
-                <p>Full Strok Web Devloper</p>
-                <h1>Hi, I'm <span>Md. Amir Neaz </span> <br> From Saidpur, Nilphamari,Bangladesh.
+                <p>Full Stack Web Devloper</p>
+                <h1>Hi, I'm <span>Md. Amir Neaz </span> <br> From Saidpur, Nilphamari, Bangladesh.
 
                 </h1>
             </div>
@@ -74,21 +74,18 @@
     </div>
 </div>
 <script>
-    var tablinks = document.getElementsByClassName("tab-link");
-    var tabcontents = document.getElementsByClassName("tab-contents");
-    function opentab(tabname){
-        for(tablink of tablinks){
-            tablink.classlist.remove("active-link")
-        }
-        for(tabcontent of tabcontents){
-            tabcontents.classlist.remove("act-tab");
-        }
+   var tablinks = document.getElementsByClassName("tab-links")
+   var tabcontents = document.getElementsByClassName("tab-contents")
+
+   function opentab(tabname){
+    for(tablink of tablinks){
+        tablink.classList.remove("active-link");
     }
-
-
-
-
-</script>
+    for(tabcontent of tabcontents){
+        tabcontent.classList.remove("act-tab");
+    }
+   }
+    </script>
 
 
 
