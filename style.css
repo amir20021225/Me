@@ -261,7 +261,7 @@ nav ul li a:hover::after{
 }
 /* ---------------Contact---------------- */
 .contact-left{
-    flex-basis: 35%;
+    flex-basis: 40%;
 }
 .contact-right{
     flex-basis: 60%;
@@ -289,9 +289,41 @@ nav ul li a:hover::after{
     color: #ff004f;
     transform: translateY(-5px);
 }
-.btn.btn2{
+.btn1{
     display: inline-block;
+    margin: 66px auto;
     
     
 
+}
+form .btn3{
+    display: inline-block;
+    background-color: #000000;
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 15px;
+    margin-left: 19px;
+    cursor: pointer;;
+}
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background-color: #262626;
+    font-weight: 300;
+    margin-top: 20px;
 }
