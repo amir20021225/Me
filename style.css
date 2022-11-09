@@ -81,14 +81,14 @@ nav ul li a:hover::after{
     flex-wrap: wrap;
 }
 .about-col-1{
-    flex-basis: 35%;
+    flex-basis: 45%;
 }
 .about-col-1 img{
     width: 100%;
     border-radius: 15px;
 }
 .about-col-2{
-    width: 60%;
+    width: 50%;
 
 }
 .sub{ 
