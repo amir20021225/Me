@@ -17,11 +17,11 @@
             <nav>
                 <img src="img/logo01.png" class="logo">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
             <div class="header-text">
@@ -143,7 +143,7 @@
         </div>
     </div>
     <!-- ----------------contact================= -->
-    <div id="container">
+    <div id="contact">
         <div class="container">
             <div class="row">
                 <div class="contact-left">
@@ -152,20 +152,22 @@
                     <p><i class="fa-solid fa-envelope"></i> amirneaz@gmail.com</p>
                     <p><i class="fa-solid fa-house"></i> Ajijar Rahman Street, Chandnagar, Saidpur.</p>
                     <div class="social-icons">
-                        <a href="https://www.facebook.com/amirneaz2002" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
-                        <a href=""target="_blank"><i class="fa-brands fa-square-twitter"></i></a>
-                        <a href=""target="_blank"><i class="fa-brands fa-square-whatsapp"></i></a>
-                        <a href=""target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.facebook.com/amirneaz2002" target="_blank"><i
+                                class="fa-brands fa-square-facebook"></i></a>
+                        <a href="" target="_blank"><i class="fa-brands fa-square-twitter"></i></a>
+                        <a href="" target="_blank"><i class="fa-brands fa-square-whatsapp"></i></a>
+                        <a href="" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                     </div>
                     <a href="My Cv.pdf" target="_blank" class="btn btn1">Download CV</a>
                 </div>
                 <div class="contact-right">
-                    <form>
+                    <form name="submit-to-google-sheet">
                         <input type=" text" name="Name" placeholder="Your Name" required>
                         <input type="email" name="Email" placeholder="Your Email" required>
                         <textarea name="Message" rows="6" placeholder=" Your Message"></textarea>
                         <button type="submit" class="btn btn3">Submit</button>
                     </form>
+                    <span id="msg"> </span>
                 </div>
             </div>
         </div>
@@ -195,7 +197,23 @@
             document.getElementById(tabname).classList.add("act-tab")
         }
     </script>
-
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbw7pexTMf0t6kaJZ_Ij9zqMlGVNugxvlqi4_hd78w0JdcHq71Hrg251B8LunR4q-ZzagA/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg= document.getElementById("msg")
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML="Your message has been submitted"
+                    setTimeout(function(){
+                        msg.innerHTML = ""
+                    },3000)
+                    form.reset()
+                 })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
 
 
 </body>
